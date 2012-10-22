@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	  <title>Projects - Asher Glick</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="globalScript.js"></script>
+    
+    <!-- Google Analytics -->
+    {{include ("googleAnalytics.html")}}
+    
+  </head>
+  <body>
+    <!-- NAVAGATION BAR -->
+    {{include ("navbar.html")}}
+    
+    <div class="content" id="content">
+      {{include ("project.html",
+                  title      = "Briefcase",
+                  subtitle   = "[In development]",
+                  text       = "a open source google docs replacement",
+                  background = "briefcaseicon.jpg",
+                  buttons    = [ { "name":"Repo"    , "link":"https://github.com/AsherGlick/Briefcase"},
+                                 { "name":"Blog"    , "link":"http://briefcasedocs.wordpress.com/"},
+                                 { "name":"Website" , "link":"https://github.com/AsherGlick/Briefcase/wiki"}
+                               ]
+                )
+      }}
+      
+      {{include ("project.html",
+                  title      = "Charliecube",
+                  subtitle   = "[Released - V1.0]",
+                  text       = "An AVR project that reads HID RFID cards",
+                  background = "charliecubeicon.png",
+                  buttons    = [ { "name":"Blog"    , "link":""},
+                                 { "name":"Repo"    , "link":""},
+                                 { "name":"Website" , "link":"./charliecube.html"}
+                               ]
+                )
+      }}
+      
+      {{include ("project.html",
+                  title      = "Olympus",
+                  subtitle   = "[In development]",
+                  text       = "a cross platform server management system",
+                  background = "olympusicon.png",
+                  buttons    = [ { "name":"Repo"    , "link":"https://github.com/AsherGlick/Olympus-Server-Management"},
+                                 { "name":"Blog"    , "link":"http://olympussm.wordpress.com/"},
+                                 { "name":"Website" , "link":""}
+                               ]
+                )
+      }}
+      
+      {{include ("project.html",
+                  title      = "AVRFID",
+                  subtitle   = "[Version 1.5]",
+                  text       = "An AVR project that reads HID RFID cards",
+                  background = "avrfidicon.png",
+                  buttons    = [ { "name":"Repo"    , "link":"https://github.com/AsherGlick/AVRFID"},
+                                 { "name":"Website" , "link":"https://github.com/AsherGlick/AVRFID/wiki"}
+                               ]
+                )
+      }}
+      
+      {{include ("project.html",
+                  title      = "Overmind",
+                  subtitle   = "[In Development - Alpha]",
+                  text       = "A QR code based room management suite",
+                  background = "overmindicon.png",
+                  buttons    = [ { "name":"Repo"    , "link":"https://github.com/AsherGlick/Overmind"},
+                                 { "name":"Blog"    , "link":""},
+                                 { "name":"Website" , "link":""}
+                               ]
+                )
+      }}
+      
+      {{include ("project.html",
+                  title      = "Ammassite",
+                  subtitle   = "[Beta Version 1.0]",
+                  text       = "A program to create static webpages",
+                  background = "",
+                  buttons    = [ { "name":"Repo"    , "link":"https://github.com/AsherGlick/Amassite"},
+                                 { "name":"Website" , "link":"https://github.com/AsherGlick/Amassite/wiki/Outline"}
+                               ]
+                )
+      }}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!--
+Variables:
+  title     - a string that is the title of the project
+  subtitle  - a string that is the subtitle of the project
+  buttons   - a map of link names to addresses
+  text      - a short description of the project
+  background - a url to a background image
+-->
+<div class="project" style="background-image:url('{{print background}}')">
+  <span class="title">{{print title}}</span><span class="subtitle">{{print subtitle}}</span>
+  {{tagWidth = math.floor((380/(len(buttons)))-10)}}
+  {{roundup = (380%(len(buttons)))}}
+  {{for i in range(0,len(buttons))}}
+    {{linkclass=""}}
+    {{linkWidth=""}}
+    {{if buttons[i]["link"] != ""}}
+      {{linkclass="info"}}
+    {{else}}
+      {{linkclass="deactive"}}
+    {{endif}}
+    {{if i < roundup }}
+      {{linkWidth=tagWidth+1}}
+    {{else}}
+      {{linkWidth=tagWidth}}
+    {{endif}}
+    <a class="{{print linkclass}}" style="width: {{print linkWidth}}"  href="{{print buttons[i]['link']}}">{{print buttons[i]['name']}}</a>
+  {{endfor}}
+  <p class="projecttext">{{print text}}</p>
+</div>
