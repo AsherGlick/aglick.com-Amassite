@@ -1,0 +1,42 @@
+<html><head><script type="text/javascript" src="globalScript.js"></script><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>Home - Asher Glick</title><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript">
+      var downloadCounts;
+      function link(download) {
+        var outHTML = "<div class=\"downloadbar\"><div class=\"downloadtitle\">"+download+"</div><div class=\"downloadlinks\">";
+        for (i in arguments) {
+          if (i == 0) {continue;}
+          outHTML += "<a style=\"font-size:15px;\"";
+          outHTML += " class=\"downloadlink\" href=\"" + arguments[i][1] + "\">"+arguments[i][0]+"</a> ";
+        }
+        outHTML += "</div></div>";
+        document.getElementById('content').innerHTML += outHTML;
+      }
+      
+      function load() {
+        /*link("Weekend game",
+             ["Windows","weekendgame.exe"],
+             ["Mac","weekendgame.dmg"],
+             ["Linux","weekendgame.tar.gz"],
+             ["Source","weekendgame.zip"]);*/
+        /*link("Overmind",
+             ["Android App","overmind.apk"]);
+             ["Iphone App","overmind.app"],
+             ["Source","overmind.zip"]);*/
+        link("Charliecube",
+             ["Intro Video","http://www.mediafire.com/download.php?u37vh47rsz3r333"],
+             /*["How-To Guide","charliecube.pdf"],*/
+             ["Arduino Libraries","https://github.com/AsherGlick/Charliecube/zipball/master"]);/*
+             ["Computer Interface","charliecube.exe"]);*/
+      }
+    </script><script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28401056-1']);
+      _gaq.push(['_setDomainName', 'aglick.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script></head><body onload="load()"><div class="headder"><div class="navbutton"><a href='./index.html'>Home</a></div><div class="navbutton"><a href='./projects.html'>Projects</a></div><div class="navbutton"><a href='./downloads.html'>Downloads</a></div></div><div class="content" id="content"></div></body></html>

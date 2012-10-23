@@ -1,0 +1,748 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	  <title>Charliecube - Asher Glick</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="lightbox/lightbox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="lightbox/lightbox.js"></script>
+    <!-- End Lightbox -->
+    
+    <!-- Code hilighter -->
+    <link href="css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script src="js/shCore.js"></script>
+    <script src="js/shBrushCpp.js"></script>
+    <!-- End Code hilighter -->
+
+    <!-- Google Analytics -->
+    {{include ("googleAnalytics.html")}}
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    <!-- NAVAGATION BAR -->
+    {{include ("navbar.html")}}
+
+    <div class="content">     
+      <div class="text">
+        <h2 style="text-align:center">Charliecube</h2>
+        <table border=0 style="border-collapse:collapse; width:100%; text-align:center;">
+          <tr>
+            <td style="width:300px"><a href="#whatIsIt" class="nav">What is it?</a></td>
+          </tr><tr>
+            <td style="width:300px"><a href="#howIsItBuilt" class="nav">How is it Built?</a></td>
+          </tr><tr>
+            <td style="width:300px"><a href="#howIsItProgramed" class="nav">How is it Programed?</a></td>
+          </tr><tr>
+            <td style="width:300px"><a href="#Downloads" class="nav">Downloads</a></td>
+          </tr>
+        </table>
+      </div>
+
+      </div>
+
+      <div class="content">
+                  <a name="whatIsIt" />
+      <h3>What is it?</h3>
+      <div class="text">
+        Charliecube is a 4x4x4 tri-color LED Cube. But what makes it special? Other cubes use shift registers, decade counters, or other components to control all the LEDs and can cost upwards of $150. The charliecube can be run using only 16 digital pins with no extra components and costs $30 plus an arduino.
+      </div>
+      
+      <!--
+      <h3>How does it work?</h3>
+      <div class="text">
+        The charliecube works by using a method of LED control called "charlieplexing". In order to comprehensively explain it, I will first go over matrixing, a simpler method of controling many LEDs.
+        
+         
+        <div class="image" style="">
+        <div class="imageline"> </div>
+          <a href="./charliecube/charlieplexing/charlieplexinggraphics0001.png" rel="lightbox" >
+            <img src="./charliecube/charlieplexing_thumbnail/charlieplexinggraphics0001.png" />
+          </a>
+        </div>
+        LEDs are diodes, meaning that they only allow electric current to pass in one direction, and will only turn on if current is passing in that direction.<br /><i> As shown in the picture above.</i>
+        
+        <div class="image" style="">
+         <div class="imageline"> </div>
+         <div><a href="./charliecube/charlieplexing/charlieplexinggraphics0014.png" rel="lightbox" > <img src="./charliecube/charlieplexing_thumbnail/charlieplexinggraphics0014.png" /></a>
+          <a href="./charliecube/charlieplexing/charlieplexinggraphics0019.png" rel="lightbox" ><img src="./charliecube/charlieplexing_thumbnail/charlieplexinggraphics0019.png" /></a>
+          </div>
+          
+        </div>  
+        more text, this section will be removed until it is compleeted
+      </div>
+      -->
+      </div>
+      <div class="content">
+      <a name="howIsItBuilt" />
+      <h3>How is it built?</h3>
+      <div class="text">
+        This section will cover two things <br />
+        <b>First:</b> Assembling a Spire <i>one of the 16 columns of the cube</i> <br />
+        <b>Second:</b> Putting it all together to build the whole Cube! 
+        
+        <h4> Parts List </h4>
+        <list>
+          <li>64 RGB Leds, diffused<i>, ours were common cathode</i> $0.311 each </li>
+          <li>1 Large Radioshack PC Grid Proto Board (4.5” x 6.625”) $2.95</li>
+          <li>40 feet of solid core 20 gauge wire (or similar size) for supporting the spires</li>
+          <li>10 feet of stranded 22 gauge wire (or similar size) for connecting spires together </li>
+          <i> We like to use old floppy cables we have lying around.  One is enough for this.  </i>
+          <li>Optional - paint to color the proto board differently.  White reflects nicely, and black hides everything.  </li>
+        </list>
+        
+        
+        <h4 class="imgfix">Assembling a Spire</h4>
+      
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h05m36s2.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h05m36s2.png" /></a>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h07m21s74.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h07m21s74.png" /></a>
+        </div>
+        Take four LEDs and bend all the leads out. <br />
+        <i> be sure to do this the same way for each LED so it is easier to put together later </i> 
+        
+        
+        
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h08m27s206.png" rel="lightbox"> <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h08m27s206.png" /> </a>
+        </div>
+        In each spire the LEDs will all be rotated 90&deg; from each other (or &pi;/2 rad for you who do math)<br />
+        So keep track of which way the leds are rotated!<br />
+        <i>If you have lost track of which the rotations, each led has a notch on the side of the package wich you can use </i>
+        
+        
+        
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m06s84.png" rel="lightbox"><img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m06s84.png" /> </a>
+        </div>
+        Solder wires to each lead of the LED <br />
+        <i>If you accadentaly solder two LEDs in the same orintation it may glitch out other parts of the cube when attempting to display</i>
+        
+        
+        
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h03m05s5.png" rel="lightbox"><img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h03m05s5.png" /></a>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h12m22s253.png" rel="lightbox"><img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h12m22s253.png" /> </a>
+        </div>
+        After soldering the spire together you can cut the prodruding leads off.<br />
+        <i>make sure that all the leds turn on before you cut the extra leads, if you soldered it wrong then it will be harder to correct later.</i>
+        
+        
+        
+        <h4 class="imgfix">Building the whole cube!</h4>
+        
+        
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m30s179.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m30s179.png" /></a>
+        </div>
+        put one of the spires on to the cube and solder it in. <br />
+        <i>Remember the direction that the spire is facing.</i> <br />
+        <i>Each spire has a 3x3 footprint where each leg is 1 hole away from the adjacent ones.</i>
+        
+        
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m41s254.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m41s254.png" /></a>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m51s118.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m51s118.png" /></a>
+        </div>
+        Then solder the other spires on in the same direction. <br />
+        <i> if you dont solder them all in the same direction that is ok and can be fixed in the software. </i> <br />
+        <i> each spire has 9 holes in between them on our cube. </i>
+        
+        
+        
+        
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/vlcsnap-2011-12-31-13h39m36s77.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-31-13h39m36s77.png" /></a>
+          <a href="./charliecube/howtobuild/cubewireingv20009.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20009.png" /></a>
+        </div>
+        Flip the board over to attach the wires. The easiest way to wire the board is in four groups of four
+        
+        
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/cubewireingv20001.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20001.png" /></a>
+          <a href="./charliecube/howtobuild/cubewireingv20003.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20003.png" /></a>
+        </div>
+        The first and the second groups are fairly simple.
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/cubewireingv20005.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20005.png" /></a>
+          <a href="./charliecube/howtobuild/cubewireingv20007.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20007.png" /></a>
+        </div>
+        The third group is kinda tricky and the fourth group is the hardest in my oppinion.
+        
+        
+        <div class="image" style="">
+          <div class="imageline"> </div>
+          <a href="./charliecube/howtobuild/cube-edit.jpg" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cube-edit.jpg" /></a>
+        </div>
+        Connect those 16 wires to any pins on the arduino, and then you are done. <br />
+        <i>Ours uses digital pins 2 - 13 and analog pins 0-3.</i>
+        <br /> <br />
+        <table style="width:100%;border-radius:15px" border=0>
+        <tr class="a"><th>Wire Number</th><th>Arduino Pin</th><th>AVR Pin</th></tr>
+        <tr class="b"><td><div class="wirecolor" style="background: #FF0000"></div>1 </td><td>Digital 2            </td><td> Port D - Pin 2 [PD2]</td></tr>
+        <tr class="a"><td><div class="wirecolor" style="background: #0000FF"></div>2 </td><td>Digital 3            </td><td> Port D - Pin 3 [PD3]</td></tr>
+        <tr class="b"><td><div class="wirecolor" style="background: #00FF00"></div>3	</td><td>Digital 4            </td><td> Port D - Pin 4 [PD4]</td></tr>
+        <tr class="a"><td><div class="wirecolor" style="background: #FFFF00"></div>4	</td><td>Digital 5            </td><td> Port D - Pin 5 [PD5]</td></tr>
+        <tr class="b"><td><div class="wirecolor" style="background: #00FFFF"></div>5 </td><td>Digital 6            </td><td> Port D - Pin 6 [PD6]</td></tr>
+        <tr class="a"><td><div class="wirecolor" style="background: #FF00FF"></div>6 </td><td>Digital 7            </td><td> Port D - Pin 7 [PD7]</td></tr>
+        <tr class="b"><td><div class="wirecolor" style="background: #000000"></div>7 </td><td>Digital 8            </td><td> Port B - Pin 0 [PB0]</td></tr>
+        <tr class="a"><td><div class="wirecolor" style="background: #FFFFFF"></div>8 </td><td>Digital 9            </td><td> Port B - Pin 1 [PB1]</td></tr>
+        <tr class="b"><td><div class="wirecolor" style="background: #FF8800"></div>9 </td><td>Digital 10           </td><td> Port B - Pin 2 [PB2]</td></tr>
+        <tr class="a"><td><div class="wirecolor" style="background: #884400"></div>10</td><td>Digital 11           </td><td> Port B - Pin 3 [PB3]</td></tr>
+        <tr class="b"><td><div class="wirecolor" style="background: #CCCCCC"></div>11</td><td>Digital 12           </td><td> Port B - Pin 4 [PB4]</td></tr>
+        <tr class="a"><td><div class="wirecolor" style="background: #555555"></div>12</td><td>Digital 13           </td><td> Port B - Pin 5 [PB5]</td></tr>
+        <tr class="b"><td><div class="wirecolor" style="background: #FF9999"></div>13</td><td>Analog 0 (Digital 14)</td><td> Port C - Pin 0 [PC0]</td></tr>
+        <tr class="a"><td><div class="wirecolor" style="background: #3399FF"></div>14</td><td>Analog 1 (Digital 15)</td><td> Port C - Pin 1 [PC1]</td></tr>
+        <tr class="b"><td><div class="wirecolor" style="background: #669933"></div>15</td><td>Analog 2 (Digital 16)</td><td> Port C - Pin 2 [PC2]</td></tr>
+        <tr class="a"><td><div class="wirecolor" style="background: #990000"></div>16</td><td>Analog 3 (Digital 17)</td><td> Port C - Pin 3 [PC3]</td></tr>
+        </table>
+        
+      <div class="warning"> <div class="warnicon">!</div>The AVR pins are ment for an ATmega328 if you are using an ATmega32U4 (Arduino Leonardo) you will need to use a different pin mapping</div>
+      </div> <!-- End class="text" -->
+      
+      
+</div>
+      <div class="content">
+            <a name="howIsItProgramed" />
+      <h3>How is it programmed?</h3>
+      <div class="text">
+        The libraries developed for the charliecube provide you with a nice set of functions that you can use to draw animations.
+        <br /><br />
+        <table border=0 style="border-collapse:collapse; width:100%; text-align:center;">
+          <tr>
+            <td><a href="#drawLed" class="nav">drawLed()</a></td>
+            <td><a href="#drawBoxOutline" class="nav">drawBoxOutline()</a></td>
+            <td><a href="#drawHollowBox" class="nav">drawHollowBox()</a></td>
+            <td> <a href="#flushBuffer" class="nav">flushBuffer()</a></td>
+          </tr>
+          <tr>
+            <td><a href="#drawBox" class="nav">drawBox()</a></td>
+            <td><a href="#drawBoxWalls" class="nav">drawBoxWalls()</a></td>
+            <td><a href="#drawLine" class="nav">drawLine()</a></td>
+            <td><a href="#clearBuffer" class="nav">clearBuffer()</a></td>
+          </tr>
+          <!--<tr>
+            <td><a href="#initCube" class="nav">initCube()</a></td>
+            <td><a href="#nextPrimaryColor" class="nav">nextPrimaryColor()</a></td>
+            <td><a href="#nextSecondaryColor" class="nav">nextSecondaryColor()</a></td>
+            <td><a href="#nextColor" class="nav">nextColor()</a></td>
+          </tr>-->
+        </table>
+        <br />
+        
+        <!-- Start Function Doc -->
+        <a name="drawLed" />
+        <h4 class="function">drawLed()</h4>
+        This function turns on leds at a specified position. Depending on which color this function turns on different colors of the LED
+        <div class="functionArgs">
+          <span class="title">Valid Permutations</span>
+          <span class="code">
+            drawLed(color, brightness, x-pos, y-pos, z-pos); <br />
+            drawLed(color, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x-pos, y-pos, z-pos); <br />
+          </span>
+        </div>
+        <div class="functionArgs">
+          <span class="title">Arguments</span>
+          color: what color the led should be <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i><b>integer:</b> red, blue, green, purple, yellow, teal, white, off </i> <br />
+          brightness: what brightness should the led be at<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3 4 5 6 7 8 HALF=4 FULL=8</i><br />
+          start-x: x coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-y: y coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-z: z coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+        </div>
+        <div class="functionArgs">
+          <span class="title">Example</span>
+          <span class="code">
+            <pre class='brush: cpp'>
+              #include "cubeplex.h"
+              int color = red;
+
+              void setup() {
+                // initilize the cube display
+                initCube();
+                
+                // how many secconds until continuePattern is set to false
+                animationMax = 10;
+              }
+              void loop() {
+                randomLed();
+              }
+              void randomLed(){
+                continuePattern = true; 
+                int animationSpeed = 100; 
+                while (continuePattern) {
+                  int xpos = random(0,4);
+                  int ypos = random(0,4);
+                  int zpos = random(0,4);
+                
+                  drawLed(color,xpos,ypos,zpos);
+                  
+                  flushBuffer();
+                  clearBuffer();
+                  delay(animationSpeed);
+                }
+              }
+            </pre>
+          </span>
+        </div>
+        <!-- End Function Doc -->
+        
+        
+        <!-- Start Function Doc -->
+        <a name="drawBox" />
+        <h4 class="function">drawBox()</h4>
+        This function will draw a filled in box of the specified color on the cube
+        <div class="functionArgs">
+          <span class="title">Valid Permutations</span>
+          <span class="code">
+            drawBox(color, brightness, start-x, start-y, start-z, end-x, end-y, end-z); <br />
+            drawBox(color, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start-x, start-y, start-z, end-x, end-y, end-z); <br />
+          </span>
+        </div>
+        <div class="functionArgs">
+          <span class="title">Arguments</span>
+          color: what color the led should be <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer red blue green purple yellow teal white off </i> <br />
+          brightness: what brightness should the led be at<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3 4 5 6 7 8 HALF=4 FULL=8</i><br />
+          start-x: x coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-y: y coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-z: z coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-x: x coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-y: y coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-z: z coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+        </div>
+        <div class="functionArgs">
+          <span class="title">Example</span>
+          <span class="code">
+            <pre class='brush: cpp'>
+              #include "cubeplex.h"
+              
+              void setup() {
+                //initilize the cube display
+                initCube();
+                
+                // set the number of seconds until continuePattern is set to false
+                animationMax = 10;
+              }
+              void loop() {
+                bigBlueBox();
+                tinyGreenBox();
+              }
+              void bigBlueBox() {
+                continuePattern = true;
+                draw(blue,0,0,0,3,3,3);
+                flushBuffer();
+                clearBuffer();
+                // do nothing while the pattern continues
+                while(continuePattern);
+              }
+              void tinyGreenBox() {
+                continuePattern = true;
+                drawBox(green,FULL,1,1,1,2,2,2);
+                flushBuffer();
+                clearBuffer();
+                // loop until the pattern is done
+                while(continuePattern);
+              }
+            </pre>
+          </span>
+        </div>
+        <!-- End Function Doc -->
+        
+
+      
+      
+       <!-- Start Function Doc -->
+        <a name="drawHollowBox" />
+        <h4 class="function">drawHollowBox()</h4>
+        This function will draw the walls, celing, and floor of a defined box
+        <div class="functionArgs">
+          <span class="title">Valid Permutations</span>
+          <span class="code">
+            drawHollowBox(color, brightness, start-x, start-y, start-z, end-x, end-y, end-z); <br />
+            drawHollowBox(color, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start-x, start-y, start-z, end-x, end-y, end-z); <br />
+          </span>
+        </div>
+        <div class="functionArgs">
+          <span class="title">Arguments</span>
+          color: what color the led should be <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer red blue green purple yellow teal white off </i> <br />
+          brightness: what brightness should the led be at<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3 4 5 6 7 8 HALF=4 FULL=8</i><br />
+          start-x: x coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-y: y coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-z: z coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-x: x coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-y: y coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-z: z coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+        </div>
+        <div class="functionArgs">
+          <span class="title">Example</span>
+          <span class="code">
+            <pre class='brush: cpp'>
+              #include "cubeplex.h"
+              
+              int color = red;
+              
+              void setup() {
+                // initilize the cube display
+                initCube();
+                // set the number of seconds each animation should run for
+                animationMax = 10;
+              }
+              void loop() {
+                pulsingCube();
+              }
+              void pulsingCube() {
+                continuePattern = true;
+                int animationSpeed = 100;
+                while (continuePattern) {
+                  for (int i = 0; i < 4; i++) {
+                    drawHollowBox(color,0,0,0,i,i,i);
+                    flushBuffer();
+                    clearBuffer();
+                    delay(animationSpeed);
+                  }
+                  for (int i = 0; i < 4; i++) {
+                    drawHollowBox(color,i,i,i,3,3,3);
+                    flushBuffer();
+                    clearBuffer();
+                    delay(animationSpeed);
+                  }
+                  color=nextColor(color);
+                }
+              }
+            </pre>
+          </span>
+        </div>
+        <!-- End Function Doc -->
+        
+        
+        <!-- Start Function Doc -->
+        <a name="drawBoxOutline" />
+        <h4 class="function">drawBoxOutline()</h4>
+        This function will draw edges of a defined box but none of the planes
+        <div class="functionArgs">
+          <span class="title">Valid Permutations</span>
+          <span class="code">
+            drawBoxOutline(color, brightness, start-x, start-y, start-z, end-x, end-y, end-z); <br />
+            drawBoxOutline(color, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start-x, start-y, start-z, end-x, end-y, end-z); <br />
+          </span>
+        </div>
+        <div class="functionArgs">
+          <span class="title">Arguments</span>
+          color: what color the led should be <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer red blue green purple yellow teal white off </i> <br />
+          brightness: what brightness should the led be at<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3 4 5 6 7 8 HALF=4 FULL=8</i><br />
+          start-x: x coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-y: y coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-z: z coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-x: x coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-y: y coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-z: z coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+        </div>
+        <div class="functionArgs">
+          <span class="title">Example</span>
+          <span class="code">
+            <pre class='brush: cpp'>
+              #include "cubeplex.h"
+ 
+              int color = red;
+               
+              void setup() {
+                // initilize the cube display
+                initCube();
+                // set the number of seconds each animation should run for
+                animationMax = 10;
+              }
+              void loop() {
+                pulsingCube();
+              }
+              void pulsingCube() {
+                continuePattern = true;
+                int animationSpeed = 100;
+                while (continuePattern) {
+                  for (int i = 0; i < 4; i++) {
+                    drawBoxOutline(color,0,0,0,i,i,i);
+                    flushBuffer();
+                    clearBuffer();
+                    delay(animationSpeed);
+                  }
+                  for (int i = 0; i < 4; i++) {
+                    drawBoxOutline(color,i,i,i,3,3,3);
+                    flushBuffer();
+                    clearBuffer();
+                    delay(animationSpeed);
+                  }
+                  color=nextColor(color);
+                }
+              }
+            </pre>
+          </span>
+        </div>
+        <!-- End Function Doc -->
+        
+        
+        <!-- Start Function Doc -->
+        <a name="drawBoxWalls" />
+        <h4 class="function">drawBoxWalls()</h4>
+        This function will draw the virtical walls and all four sides of a defined box 
+        <div class="functionArgs">
+          <span class="title">Valid Permutations</span>
+          <span class="code">
+            drawBoxWalls(color, brightness, start-x, start-y, start-z, end-x, end-y, end-z); <br />
+            drawBoxWalls(color, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start-x, start-y, start-z, end-x, end-y, end-z); <br />
+          </span>
+        </div>
+        <div class="functionArgs">
+          <span class="title">Arguments</span>
+          color: what color the led should be <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer red blue green purple yellow teal white off </i> <br />
+          brightness: what brightness should the led be at<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3 4 5 6 7 8 HALF=4 FULL=8</i><br />
+          start-x: x coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-y: y coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-z: z coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-x: x coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-y: y coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-z: z coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+        </div>
+        <div class="functionArgs">
+          <span class="title">Example</span>
+          <span class="code">
+            <pre class='brush: cpp'>
+              #include "cubeplex.h"
+ 
+              int color = red;
+               
+              void setup() {
+                // initilize the cube display
+                initCube();
+                // set the number of seconds each animation should run for
+                animationMax = 10;
+              }
+              void loop() {
+                fountian();
+              }
+              void fountian() {
+                continuePattern = true;
+                int animationSpeed = 100;
+                while (continuePattern) {
+                  for (int z = 0; z <= 3; z++) {
+                    drawBoxWalls(color,1,1,z,2,2,z);
+                    flushBuffer();
+                    clearBuffer();
+                    delay(animationSpeed);
+                  }
+                  for (int z = 3; z >= 0; z--) {
+                    drawBoxWalls(color,0,0,z,3,3,z);
+                    flushBuffer();
+                    clearBuffer();
+                    delay(animationSpeed);
+                  }
+                  color=nextColor(color);
+                }
+              }
+            </pre>
+          </span>
+        </div>
+        <!-- End Function Doc -->
+        
+        
+        <!-- Start Function Doc -->
+        <a name="drawLine" />
+        <h4 class="function">drawLine()</h4>
+        This function will attempt to draw a line between the two points given. Due to the limited avalibility of pixels the best approximation is chosen for each pixel value  
+        <div class="functionArgs">
+          <span class="title">Valid Permutations</span>
+          <span class="code">
+            drawLine(color, brightness, start-x, start-y, start-z, end-x, end-y, end-z); <br />
+            drawLine(color, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start-x, start-y, start-z, end-x, end-y, end-z); <br />
+          </span>
+        </div>
+        <div class="functionArgs">
+          <span class="title">Arguments</span>
+          color: what color the led should be <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer red blue green purple yellow teal white off </i> <br />
+          brightness: what brightness should the led be at<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3 4 5 6 7 8 HALF=4 FULL=8</i><br />
+          start-x: x coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-y: y coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          start-z: z coordinate for the starting point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-x: x coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-y: y coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+          end-z: z coordinate for the ending point<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<i>integer 0 1 2 3</i><br />
+        </div>
+        <div class="functionArgs">
+          <span class="title">Example</span>
+          <span class="code">
+            <pre class='brush: cpp'>
+              #include "cubeplex.h"
+              
+              int color = red;
+              
+              void setup() {
+                initCube;
+                animationMax = 10;
+              }
+              void loop() {
+                planarSpin();
+              }
+              void planarSpin() {
+                continuePattern = true;
+                int animationSpeed = 50;
+                int spinsPerColor = 5; // a spin is actually half a revolution
+                while (continuePattern) {
+                  int x = 0;
+                  int y = 0;
+                  for (int i = 0; i < spinsPerColor; i++) {
+                    for (int x = 0; x < 3; x++) {
+                      drawLine(color,x,0,0,3-x,3,0);
+                      drawLine(color,x,0,1,3-x,3,1);
+                      drawLine(color,x,0,2,3-x,3,2);
+                      drawLine(color,x,0,3,3-x,3,3);
+                      flushBuffer();
+                      clearBuffer();
+                      delay(animationSpeed);
+                    }
+                    for (int y = 0; y < 3; y++) {
+                      drawLine(color,3,y,0,0,3-y,0);
+                      drawLine(color,3,y,1,0,3-y,1);
+                      drawLine(color,3,y,2,0,3-y,2);
+                      drawLine(color,3,y,3,0,3-y,3);
+                      flushBuffer();
+                      clearBuffer();
+                      delay(animationSpeed);
+                    }
+                  }
+                  color = nextColor(color);
+                }
+              }
+            </pre>
+          </span>
+        </div>
+        <!-- End Function Doc -->
+        
+        
+        <!-- Start Function Doc -->
+        <a name="flushBuffer" />
+        <h4 class="function">flushBuffer()</h4>
+        This takes the buffer frame and sets the display memory to match, because the display memory needs to be faster it is split up into two arrays instead of just one. The display frame is actually a ciclic linked list which allows the program to just loop through and turn on the LEDs without the need to check to see if it is at the end of the loop  
+        <div class="functionArgs">
+          <span class="title">Valid Permutations</span>
+          <span class="code">
+            flushBuffer();
+          </span>
+        </div>
+        <div class="functionArgs">
+          <span class="title">Arguments</span>
+          no arguments
+        </div>
+        <div class="functionArgs">
+          <span class="title">Example</span>
+          <span class="code">
+            <pre class='brush: cpp'>
+              
+            </pre>
+          </span>
+        </div>
+        <!-- End Function Doc -->
+        
+        
+        <!-- Start Function Doc -->
+        <a name="clearBuffer" />
+        <h4 class="function">clearBuffer()</h4>
+        This function will clear the buffer that you can write to, this will allow you to draw an eniterly new frame int othe buffer
+        <div class="functionArgs">
+          <span class="title">Valid Permutations</span>
+          <span class="code">
+            clearBuffer();
+          </span>
+        </div>
+        <div class="functionArgs">
+          <span class="title">Arguments</span>
+          no arguments
+        </div>
+        <div class="functionArgs">
+          <span class="title">Example</span>
+          <span class="code">
+            <pre class='brush: cpp'>
+              
+            </pre>
+          </span>
+        </div>
+        <!-- End Function Doc -->
+        
+        
+        
+      </div><!-- End class="text" -->
+      </div>
+      <div class="content">
+               <a name="Downloads" />
+      <h3> Downloads and Links </h3>
+      <div class="text">
+        
+        <a style="font-size:15px;"   class="downloadlink" href="https://github.com/AsherGlick/Charliecube/zipball/master">Arduino Libraries</a>
+        <!--
+        <a style="font-size:15px;"   class="downloadlink" href="https://github.com/AsherGlick/Charliecube/zipball/master">Intro Video</a>
+        <a style="font-size:15px;"   class="downloadlink" href="https://github.com/AsherGlick/Charliecube/zipball/master">Interactive Demo</a>
+        -->
+        
+        
+      </div>
+      
+    </div> <!-- End class="content" -->
+    <script>
+      SyntaxHighlighter.all();
+    </script>
+    {{include("footer.html")}}
+  </div>
+  </body>
+</html>
