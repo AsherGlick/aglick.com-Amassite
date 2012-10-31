@@ -1,0 +1,12 @@
+<!--
+Variables:
+  images - a map of array of one or two image urls
+-->
+
+
+<div class="image" style="">
+  <div class="imageline"> </div>
+  {{for i in images}}
+    <a href="{{print i['thumbnail']}}" rel="lightbox" > <img src="{{print i['hires']}}" /></a>
+  {{endfor}}
+</div>

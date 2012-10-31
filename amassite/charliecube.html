@@ -95,41 +95,41 @@
         
         
         <h4 class="imgfix">Assembling a Spire</h4>
-      
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h05m36s2.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h05m36s2.png" /></a>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h07m21s74.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h07m21s74.png" /></a>
-        </div>
+
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-27-16h05m36s2.png", "hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h05m36s2.png"},
+                      {"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-27-16h07m21s74.png","hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h07m21s74.png"}]
+        )}}
+
         Take four LEDs and bend all the leads out. <br />
         <i> be sure to do this the same way for each LED so it is easier to put together later </i> 
         
         
-        
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h08m27s206.png" rel="lightbox"> <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h08m27s206.png" /> </a>
-        </div>
+
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-27-16h08m27s206.png", "hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h08m27s206.png"}]
+        )}}
+
+
         In each spire the LEDs will all be rotated 90&deg; from each other (or &pi;/2 rad for you who do math)<br />
         So keep track of which way the leds are rotated!<br />
         <i>If you have lost track of which the rotations, each led has a notch on the side of the package wich you can use </i>
         
+
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m06s84.png", "hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m06s84.png"}]
+        )}}
         
-        
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m06s84.png" rel="lightbox"><img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m06s84.png" /> </a>
-        </div>
+
         Solder wires to each lead of the LED <br />
         <i>If you accadentaly solder two LEDs in the same orintation it may glitch out other parts of the cube when attempting to display</i>
         
         
-        
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h03m05s5.png" rel="lightbox"><img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h03m05s5.png" /></a>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h12m22s253.png" rel="lightbox"><img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h12m22s253.png" /> </a>
-        </div>
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-27-16h03m05s5.png", "hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h03m05s5.png"},
+                      {"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-27-16h12m22s253.png","hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h12m22s253.png"}]
+        )}}
+
         After soldering the spire together you can cut the prodruding leads off.<br />
         <i>make sure that all the leds turn on before you cut the extra leads, if you soldered it wrong then it will be harder to correct later.</i>
         
@@ -147,23 +147,23 @@
         <i>Each spire has a 3x3 footprint where each leg is 1 hole away from the adjacent ones.</i>
         
         
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m41s254.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m41s254.png" /></a>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m51s118.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m51s118.png" /></a>
-        </div>
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m41s254.png", "hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m41s254.png"},
+                      {"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m51s118.png","hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m51s118.png"}]
+        )}}
+
         Then solder the other spires on in the same direction. <br />
         <i> if you dont solder them all in the same direction that is ok and can be fixed in the software. </i> <br />
         <i> each spire has 9 holes in between them on our cube. </i>
         
         
         
+
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"/charliecube/howtobuild/vlcsnap-2011-12-31-13h39m36s77.png", "hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-31-13h39m36s77.png"},
+                      {"thumbnail":"./charliecube/howtobuild/cubewireingv20009.png","hires" : "./charliecube/howtobuild_thumbnail/cubewireingv20009.png"}]
+        )}}
         
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-31-13h39m36s77.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-31-13h39m36s77.png" /></a>
-          <a href="./charliecube/howtobuild/cubewireingv20009.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20009.png" /></a>
-        </div>
         Flip the board over to attach the wires. The easiest way to wire the board is in four groups of four
         
         
@@ -173,6 +173,7 @@
           <a href="./charliecube/howtobuild/cubewireingv20003.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20003.png" /></a>
         </div>
         The first and the second groups are fairly simple.
+
         <div class="image" style="">
           <div class="imageline"> </div>
           <a href="./charliecube/howtobuild/cubewireingv20005.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20005.png" /></a>
