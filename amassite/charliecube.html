@@ -138,10 +138,11 @@
         <h4 class="imgfix">Building the whole cube!</h4>
         
         
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m30s179.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m30s179.png" /></a>
-        </div>
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-27-16h10m30s179.png", "hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-27-16h10m30s179.png"}]
+        )}}
+
+
         put one of the spires on to the cube and solder it in. <br />
         <i>Remember the direction that the spire is facing.</i> <br />
         <i>Each spire has a 3x3 footprint where each leg is 1 hole away from the adjacent ones.</i>
@@ -160,32 +161,28 @@
         
 
         {{include ("charliecube_templates/image.html",
-            images = [{"thumbnail":"/charliecube/howtobuild/vlcsnap-2011-12-31-13h39m36s77.png", "hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-31-13h39m36s77.png"},
+            images = [{"thumbnail":"./charliecube/howtobuild/vlcsnap-2011-12-31-13h39m36s77.png", "hires" : "./charliecube/howtobuild_thumbnail/vlcsnap-2011-12-31-13h39m36s77.png"},
                       {"thumbnail":"./charliecube/howtobuild/cubewireingv20009.png","hires" : "./charliecube/howtobuild_thumbnail/cubewireingv20009.png"}]
         )}}
         
         Flip the board over to attach the wires. The easiest way to wire the board is in four groups of four
         
-        
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/cubewireingv20001.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20001.png" /></a>
-          <a href="./charliecube/howtobuild/cubewireingv20003.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20003.png" /></a>
-        </div>
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"./charliecube/howtobuild/cubewireingv20001.png", "hires" : "./charliecube/howtobuild_thumbnail/cubewireingv20001.png"},
+                      {"thumbnail":"./charliecube/howtobuild/cubewireingv20003.png","hires" : "./charliecube/howtobuild_thumbnail/cubewireingv20003.png"}]
+        )}}
         The first and the second groups are fairly simple.
 
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/cubewireingv20005.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20005.png" /></a>
-          <a href="./charliecube/howtobuild/cubewireingv20007.png" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cubewireingv20007.png" /></a>
-        </div>
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"./charliecube/howtobuild/cubewireingv20005.png", "hires" : "./charliecube/howtobuild_thumbnail/cubewireingv20005.png"},
+                      {"thumbnail":"./charliecube/howtobuild/cubewireingv20007.png","hires" : "./charliecube/howtobuild_thumbnail/cubewireingv20007.png"}]
+        )}}
+
         The third group is kinda tricky and the fourth group is the hardest in my oppinion.
         
-        
-        <div class="image" style="">
-          <div class="imageline"> </div>
-          <a href="./charliecube/howtobuild/cube-edit.jpg" rel="lightbox" > <img src="./charliecube/howtobuild_thumbnail/cube-edit.jpg" /></a>
-        </div>
+        {{include ("charliecube_templates/image.html",
+            images = [{"thumbnail":"./charliecube/howtobuild/cube-edit.jpg", "hires" : "./charliecube/howtobuild_thumbnail/cube-edit.jpg"}]
+        )}}
         Connect those 16 wires to any pins on the arduino, and then you are done. <br />
         <i>Ours uses digital pins 2 - 13 and analog pins 0-3.</i>
         <br /> <br />
