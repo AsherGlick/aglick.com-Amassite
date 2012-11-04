@@ -18,6 +18,7 @@
 
     <!-- Google Analytics -->
     {{include ("googleAnalytics.html")}}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   </head>
   
   <body>
@@ -186,12 +187,13 @@
         Connect those 16 wires to any pins on the arduino, and then you are done. <br />
         <i>Ours uses digital pins 2 - 13 and analog pins 0-3.</i>
         <br /> <br />
+        <!--
         <table style="width:100%;border-radius:15px" border=0>
         <tr class="a"><th>Wire Number</th><th>Arduino Pin</th><th>AVR Pin</th></tr>
         <tr class="b"><td><div class="wirecolor" style="background: #FF0000"></div>1 </td><td>Digital 2            </td><td> Port D - Pin 2 [PD2]</td></tr>
         <tr class="a"><td><div class="wirecolor" style="background: #0000FF"></div>2 </td><td>Digital 3            </td><td> Port D - Pin 3 [PD3]</td></tr>
-        <tr class="b"><td><div class="wirecolor" style="background: #00FF00"></div>3	</td><td>Digital 4            </td><td> Port D - Pin 4 [PD4]</td></tr>
-        <tr class="a"><td><div class="wirecolor" style="background: #FFFF00"></div>4	</td><td>Digital 5            </td><td> Port D - Pin 5 [PD5]</td></tr>
+        <tr class="b"><td><div class="wirecolor" style="background: #00FF00"></div>3 </td><td>Digital 4            </td><td> Port D - Pin 4 [PD4]</td></tr>
+        <tr class="a"><td><div class="wirecolor" style="background: #FFFF00"></div>4 </td><td>Digital 5            </td><td> Port D - Pin 5 [PD5]</td></tr>
         <tr class="b"><td><div class="wirecolor" style="background: #00FFFF"></div>5 </td><td>Digital 6            </td><td> Port D - Pin 6 [PD6]</td></tr>
         <tr class="a"><td><div class="wirecolor" style="background: #FF00FF"></div>6 </td><td>Digital 7            </td><td> Port D - Pin 7 [PD7]</td></tr>
         <tr class="b"><td><div class="wirecolor" style="background: #000000"></div>7 </td><td>Digital 8            </td><td> Port B - Pin 0 [PB0]</td></tr>
@@ -205,6 +207,14 @@
         <tr class="b"><td><div class="wirecolor" style="background: #669933"></div>15</td><td>Analog 2 (Digital 16)</td><td> Port C - Pin 2 [PC2]</td></tr>
         <tr class="a"><td><div class="wirecolor" style="background: #990000"></div>16</td><td>Analog 3 (Digital 17)</td><td> Port C - Pin 3 [PC3]</td></tr>
         </table>
+        -->
+
+
+        {{include ("charliecube_templates/pintable.html",
+            pinmappings = [{"chipname":"ATMega328", "pins":["PD2","PD3","PD4","PD5","PD6","PD7","PB0","PB1","PB2","PB3","PB4","PB5","PC0","PC1","PC2","PC3"],"arduinoname":"Uno"},
+                           {"chipname":"ATMega32u4","pins":["???","???","???","???","???","???","???","???","???","???","???","???","???","???","???","???"],"arduinoname":"Leonardo"},
+                           {"chipname":"ATmega2560","pins":["???","???","???","???","???","???","???","???","???","???","???","???","???","???","???","???"],"arduinoname":"Mega"}]
+        )}}
         
       <div class="warning"> <div class="warnicon">!</div>The AVR pins are ment for an ATmega328 if you are using an ATmega32U4 (Arduino Leonardo) you will need to use a different pin mapping</div>
       </div> <!-- End class="text" -->

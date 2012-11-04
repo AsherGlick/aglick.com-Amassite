@@ -357,9 +357,10 @@ div.image img:hover {
   /*margin: -1px 8px;*/
 }
 
-
-div.text a.nav {
+a.nav{
   line-height: 40px;
+}
+.nav {
   color: #333;
   background: #DDD;
   text-decoration: none;
@@ -369,7 +370,7 @@ div.text a.nav {
   font-weight: bold;
   border-radius:5px;
 }
-div.text a.nav:hover {
+.nav:hover {
   color: #CCC;
   background:#333;
   
