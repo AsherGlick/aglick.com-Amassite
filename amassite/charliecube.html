@@ -212,11 +212,12 @@
 
         {{include ("charliecube_templates/pintable.html",
             pinmappings = [{"chipname":"ATMega328", "pins":["PD2","PD3","PD4","PD5","PD6","PD7","PB0","PB1","PB2","PB3","PB4","PB5","PC0","PC1","PC2","PC3"],"arduinoname":"Uno"},
-                           {"chipname":"ATMega32u4","pins":["PD0","PD0","PD0","PD0","PD0","PD0","PD0","PD0","PD0","???","???","???","???","???","???","???"],"arduinoname":"Leonardo"},
+                           {"chipname":"ATMega32u4","pins":["PD1","PD0","PD4","PC6","PD?","PE6","PB4","PB5","PB6","PB7","PD6","PC7","PF7","PF6","PF5","PF4"],"arduinoname":"Leonardo"},
                            {"chipname":"ATmega2560","pins":["PD0","???","???","???","???","???","???","???","???","???","???","???","???","???","???","???"],"arduinoname":"Mega"}]
         )}}
-        
+      <!--
       <div class="warning"> <div class="warnicon">!</div>The AVR pins are ment for an ATmega328 if you are using an ATmega32U4 (Arduino Leonardo) you will need to use a different pin mapping</div>
+      -->
       </div> <!-- End class="text" -->
       
       

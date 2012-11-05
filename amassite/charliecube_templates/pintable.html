@@ -1,5 +1,5 @@
 {{for (i, chip) in enumerate(pinmappings)}}
-        {{thiswidth = (766 / len(pinmappings)) - 18 }}
+        {{thiswidth = (760 / len(pinmappings)) - 18 }}
         <div class="nav" style="width:{{print thiswidth}}px; text-align:center; float: left; line-height: 20px; margin: 5px; cursor:pointer;" id="pinmappingButton{{print i}}"> 
                 {{print chip["arduinoname"]}}
         </div>
@@ -11,17 +11,23 @@
                         function() {
                                 {{for j in range(0,len(pinmappings))}}
                                         {{if not j==i}}
-                                                document.getElementById("pintable{{print j}}").style.display = "none";
+                                                //document.getElementById("pintable{{print j}}").style.display = "none";
+                                                if (document.getElementById("pintable{{print j}}").style.display != "none") {
+                                                        $("#pintable{{print j}}").fadeOut(200,
+                                                                function() {$(document.getElementById("pintable{{print i}}")).fadeIn(200,console.log("LOG:"+document.getElementById("pintable{{print i}}").style.display))}
+                                                        );
+                                                        console.log("CLICK");
+                                                }
                                         {{endif}}
                                 {{endfor}}
-                                document.getElementById("pintable{{print i}}").style.display = "block";
+                                
 
                         }
                 )
         </script>
 {{endfor}}
 
-<div style="height:400px">
+<div style="clear:left">
         {{for (i, chip) in enumerate(pinmappings)}}
                 <table style="width:100%;border-radius:15px;
                 {{if not i == 0}}
