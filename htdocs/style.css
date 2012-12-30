@@ -36,6 +36,9 @@ div.footer {
   box-shadow:         0px 12px 12px 6px #444;
 
   margin-bottom:0px;
+
+  text-align: center;
+  color: #AAA;
 }
 
 div.content {
