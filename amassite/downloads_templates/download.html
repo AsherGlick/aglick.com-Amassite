@@ -1,0 +1,16 @@
+<!--
+	variables:
+	title - the title for the section of downloads
+	buttons - an array of pairs of download links
+		{'name':'linkname','link':'href location'}
+-->
+<div class="downloadbar">
+	<div class="downloadtitle">
+		{{print title}}
+	</div>
+	<div class="downloadlinks">
+		{{for button in buttons}}
+			<a style="font-size:15px;" class="downloadlink" href="{{print button['link']}}">{{print button['name']}} </a>
+		{{endfor}}
+	</div>
+</div>
