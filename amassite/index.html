@@ -6,12 +6,12 @@
     <script type="text/javascript" src="globalScript.js"></script>
     
     <!-- Google Analytics -->
-    {{include ("googleAnalytics.html")}}
+    {{include ("global_templates/googleAnalytics.html")}}
   </head>
   <body>
     <div class="wrapper">
     <!-- NAVAGATION BAR -->
-    {{include ("navbar.html")}}
+    {{include ("global_templates/navbar.html")}}
     
     <div class="content">
       <div class="text">
@@ -28,35 +28,35 @@
         <br />
         
         <!-- GITHUB -->
-        {{include ("contactButton.html",
+        {{include ("index_templates/contactButton.html",
                    name="Github",
                    link="https://github.com/AsherGlick",
                    image="snIcons/GithubLogo.png")
         }}
         
         <!-- FACEBOOK -->
-        {{include ("contactButton.html",
+        {{include ("index_templates/contactButton.html",
                    name="Facebook",
                    link="http://www.facebook.com/asherg",
                    image="snIcons/FacebookLogo.png")
         }}
         
         <!-- GOOGLE+ -->
-        {{include ("contactButton.html",
+        {{include ("index_templates/contactButton.html",
                    name="Google+",
                    link="https://plus.google.com/102313598096360208478",
                    image="snIcons/GoogleplusLogo.png")
         }}
         
         <!-- EMAIL -->
-        {{include ("contactButton.html",
+        {{include ("index_templates/contactButton.html",
                    name="Email",
                    link="&#109;a&#105;lto&#58;agl&#105;&#37;63k&#64;a%67lic%6&#66;%&#50;E&#99;&#111;m",
                    image="snIcons/GmailLogo.png")
         }}
       </div>
     </div>
-    {{include ("footer.html")}}
+    {{include ("global_templates/footer.html")}}
   </div>
   </body>
 </html>
