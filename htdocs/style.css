@@ -441,3 +441,15 @@ tr.a {
 tr.b {
   background-color:#DDD;
 }
+
+a.inlineLink{
+ /* border: 1px solid #CCC;*/
+background-color: #DDD;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 5px;
+}
+a.inlineLink:hover{
+  color: #F80;
+  
+}
