@@ -1,0 +1,455 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  background-color: #999;
+  /*background-color: #FB6;
+  background-color:#333;*/
+  height: 100%;
+}
+
+/******************************************************************************\
+|**************************** Overall Page Layouts ****************************|
+\******************************************************************************/
+div.wrapper {
+  min-height: 100%;
+  margin-left:auto;
+  margin-right:auto;
+  width: 820px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+div.footer {
+  width: 800px;
+  background-color: #CCCCCC;
+  padding: 10px;
+  overflow:hidden;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  
+  position: absolute;
+  bottom: -10px;
+
+  -moz-box-shadow:    0px 12px 12px 6px #444;
+  -webkit-box-shadow: 0px 12px 12px 6px #444;
+  box-shadow:         0px 12px 12px 6px #444;
+
+  margin-bottom:0px;
+
+  text-align: center;
+  color: #AAA;
+}
+
+div.content {
+  margin-top: 5px;
+
+  margin-bottom: 25px;
+
+  background-color: #CCCCCC;
+  padding: 10px;
+  overflow:hidden;
+  
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  
+  position: relative;
+  
+  -moz-box-shadow:    0px 12px 12px 6px #444;
+  -webkit-box-shadow: 0px 12px 12px 6px #444;
+  box-shadow:         0px 12px 12px 6px #444;
+}
+
+div.headder {
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 30px;
+  position: relative;
+}
+
+a {
+  text-decoration:none;
+  color: #000;
+  outline: none;
+}
+
+div.navbutton a {
+  text-decoration: none;
+  width: 100px;
+  padding: 5px 5px;
+  color:#000;
+  float:left;
+  text-align:center;
+  margin-left: 78px;
+  margin-right:78px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+div.navbutton a:hover {
+  background: #DDD;
+  color:#FF8000;
+}
+
+div.text {
+  margin: 10px;
+  background-color: #EEE;
+  padding: 10px;
+  overflow:hidden;
+  
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  
+  /*
+  -moz-box-shadow:    0px 6px 6px 3px #777;
+  -webkit-box-shadow: 0px 6px 6px 3px #777;
+  box-shadow:         0px 6px 6px 3px #777;
+*/
+  
+}
+/*orenge borders still need work*/
+/************************\
+div.text:hover{
+  border: 1px #F80 solid;
+  margin: 9px;
+}
+\************************/
+
+/******************************************************************************\
+|***************************** INDEX PAGE LAYOUTS *****************************|
+\******************************************************************************/
+div.contactButton {
+  width:128px;
+  text-align:center;
+  float:left;
+  margin-left: 39.6px;
+  padding: 5px 5px 0px 5px;
+  border-radius: 20px;
+  margin-top: 11px;
+}
+div.contactButton:hover {
+  opacity: 1;
+  border-left: 1px #FFF solid;
+  border-top: 1px #FFF solid;
+  border-right: 1px #AAA solid;
+  border-bottom: 1px #AAA solid;
+  margin: 10px -1px -1px 38.6px;
+  background: #DDD;
+}
+
+/******************************************************************************\
+|**************************** PROJECT PAGE LAYOUTS ****************************|
+\******************************************************************************/
+div.project {
+  width: 380px;
+  background: #FFF;
+  height: 300px;
+  float: left;
+  clear:right;
+  margin: 10px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  position:relative;
+ -moz-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/******************************************************************************\
+|**************************** Project Button Style ****************************|
+\******************************************************************************/
+div.project a.deactive {
+  text-decoration: none;
+  padding: 5px 5px;
+  color:#AAA; 
+  float:left;
+  text-align:center;
+  -moz-border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 0px 20px 20px;
+  /*background-image:url('alpha90.png');
+  background-repeat:repeat;*/
+  
+  background: rgba(255,255,255,.9);
+}
+div.project a.info {
+  text-decoration: none;
+  padding: 5px 5px;
+  color:#000;
+  float:left;
+  text-align:center;
+  -moz-border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 0px 20px 20px;
+  /*background-image:url('alpha90.png');*/
+  background: rgba(255,255,255,.9);
+  background-repeat:repeat;
+}
+div.project a.info:hover {
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.9)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+
+
+  border-bottom: black 4px solid;
+}
+/******************************************************************************\
+|*************************** Project Text Background **************************|
+\******************************************************************************/
+div.project span.title {
+  display:block;
+  text-align:center;
+  font-size: 20px;
+  /* layover the subtitle */
+  /*background-image:url('alpha90.png');
+  background-repeat:repeat;*/
+  background: rgba(255,255,255,.9);
+  
+   -moz-border-radius: 8px 8px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
+  padding-top: 2px;
+}
+div.project span.subtitle {
+  display: block;
+  text-align:center;
+  font-size: 12px;
+  /* layover the subtitle */
+  /*background-image:url('alpha90.png');
+  background-repeat:repeat;*/
+  background: rgba(255,255,255,.9);
+}
+div.project p.projecttext {
+  padding: 3px;
+  text-align: center;
+  /*background-image:url('alpha90.png');*/
+  background: rgba(255,255,255,.9);
+  /*height: 210px;*/
+  background-repeat:repeat;
+  margin-top: 40px;
+}
+/******************************************************************************\
+| Downloads page
+\******************************************************************************/
+div.downloadbar {
+  width: 760px;
+  margin: 10px;
+  background-color: #F4F4F4;
+  padding: 10px;
+  overflow:hidden;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  float:left;
+  
+  position:relative;
+}
+ a.downloadlink {
+  text-decoration: none;
+  width: 150px; 
+  margin: 5px;
+  padding: 5px 5px;
+  background:#AAA;
+  color:#333;
+  float:right;
+  text-align:center;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  
+  
+  clear:left;
+}
+
+div.downloadbar div.downloadtitle {
+  top: 50%;
+  width: 250px;
+  margin-top:-9px;
+  position: absolute;
+  float:left;
+}
+
+div.downloadbar div.downloadlinks {
+  width: 510px;
+  overflow: hidden;
+  float: right;
+}
+
+ a.downloadlink:hover {
+  background: #DDD;
+  border-top: #AAA 3px solid;
+  border-bottom: #AAA 3px solid;
+  
+  border-left: black 0px solid;
+  border-right: black 0px solid;
+  padding:2px 5px ;
+  
+  /*color:#FF8000;*/
+  
+  text-shadow: #FFFFFF 0px 1px 0px;
+}
+
+
+
+/******************************************************************************\
+| textpage |
+\******************************************************************************/
+h3   {
+  text-align: center;
+  padding:5px;
+  color: #EEE;
+  margin-left: 50px;
+  margin-right: 50px;
+  /*
+  margin-top: 0px;
+  margin-bottom: 0px;*/
+  background: #555;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+h4 {
+  padding:4px;
+  margin:0px; 
+  margin-top: 100px;  
+  text-align: center;
+  font-size: 25px;
+  
+  border-top: black 2px solid;
+  
+  margin-left:auto;
+  margin-right:auto;
+
+}
+h4.function {
+    font-family: "Courier New", monospace;
+    margin-top: 5px;
+}
+h4.imgfix {
+  margin-bottom: -110px;
+}
+div.image {
+  margin-top: 130px;
+  margin-bottom:5px;  
+  height: 200px;
+  text-align:center;
+  position:relative;
+}
+div.imageline {
+  height:60px;
+  background:#DDD;
+  position:absolute;
+  width:100%;
+  top:70px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+
+div.text i {
+  color: #666;
+}
+
+div.image img {
+  position:relative;
+  margin: 0px 9px;
+  background:#FFF;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: #666 1px solid;
+}
+div.image img:hover {
+  border: #F80 1px solid;
+  /*margin: -1px 8px;*/
+}
+
+a.nav{
+  line-height: 40px;
+}
+.nav {
+  color: #333;
+  background: #DDD;
+  text-decoration: none;
+  padding: 3px;
+  border: 1px solid #CCC;
+  
+  font-weight: bold;
+  border-radius:5px;
+}
+.nav:hover {
+  color: #CCC;
+  background:#333;
+  
+}
+
+
+div.functionArgs {
+  border: #CCC 2px solid;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+  background: #FFF;
+}
+
+span.code{
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+}
+
+div.functionArgs span.title {
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  font-weight:bold;
+}
+
+
+div.break {
+  height: 110px;  
+}
+
+div.wirecolor {
+  margin: 4px;
+  height: 10px;
+  width: 80px;
+  float: right;
+  border: 0px #000 solid;
+}
+
+div.warning {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #F88;
+  border-radius: 10px;
+  font-size: 15px;
+  
+}
+div.warnicon {
+  font-weight: 900;
+  font-size: 27;
+  border-radius: 30px;
+  width: 33px;
+  float:left;
+  background: #FF0;
+  text-align:center;
+  margin-right: 5px;
+  border: 1px solid black;
+}
+tr.a {
+  background-color: #CCC;
+}
+tr.b {
+  background-color:#DDD;
+}
+
+a.inlineLink{
+ /* border: 1px solid #CCC;*/
+background-color: #DDD;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 5px;
+}
+a.inlineLink:hover{
+  color: #F80;
+  
+}
