@@ -16,17 +16,12 @@
     
     <div class="content">
       <div class="text">
-        Hello my name is Asher Glick. I am a programmer. I have been programming since 2003<br />
-        <!--I know: C, C++, Python, Javascript, Actionscript (2 and 3)<br />
-        I have programmed in: Prolog, and Java<br />
-        I am familiaer with git and have used SVN<br />
-
-        My focus is on computer programming an artifical inteligence<br />
-        While my hobbies are in micro-electronics design<br />
-        <br />-->
-        <br />
-        You can find me on  <br />
-        <br />
+        <div style="text-align: center">
+          Hello, my name is Asher Glick. I have been a programmer since 2003. <br>
+          I like to write code to make life easier and more entertaining.
+          <br><br>
+          You can also find me at these places
+        </div>
         
         <!-- GITHUB -->
         {{include ("index_templates/contactButton.html",
@@ -34,19 +29,26 @@
                    link="https://github.com/AsherGlick",
                    image="snIcons/GithubLogo.png")
         }}
-        
-        <!-- FACEBOOK -->
+
+        <!-- Bit Bucket -->
         {{include ("index_templates/contactButton.html",
-                   name="Facebook",
-                   link="http://www.facebook.com/asherg",
-                   image="snIcons/FacebookLogo.png")
+                   name="Bit Bucket",
+                   link="https://bitbucket.org/asherglick",
+                   image="snIcons/BitBucketLogo.png")
         }}
-        
-        <!-- GOOGLE+ -->
+
+        <!-- Blog -->
         {{include ("index_templates/contactButton.html",
-                   name="Google+",
-                   link="https://plus.google.com/102313598096360208478",
-                   image="snIcons/GoogleplusLogo.png")
+                   name="Blog",
+                   link="http://asherwglick.blogspot.com/",
+                   image="snIcons/BloggerLogo.png")
+        }}
+
+        <!-- YOUTUBE -->
+        {{include ("index_templates/contactButton.html",
+                   name="Youtube",
+                   link="http://www.youtube.com/user/asherglick",
+                   image="snIcons/YoutubeLogo.png")
         }}
         
         <!-- EMAIL -->
@@ -63,26 +65,25 @@
                    image="snIcons/TwitterLogo.png")
         }}
 
-        <!-- YOUTUBE -->
+        <!-- FACEBOOK -->
         {{include ("index_templates/contactButton.html",
-                   name="Youtube",
-                   link="http://www.youtube.com/user/asherglick",
-                   image="snIcons/YoutubeLogo.png")
+                   name="Facebook",
+                   link="http://www.facebook.com/asherg",
+                   image="snIcons/FacebookLogo.png")
         }}
+        
+        <!-- GOOGLE+ -->
+        {{include ("index_templates/contactButton.html",
+                   name="Google+",
+                   link="https://plus.google.com/102313598096360208478",
+                   image="snIcons/GoogleplusLogo.png")
+        }}
+        
 
-        <!-- PHONE -->
-        {{include ("index_templates/contactButton.html",
-                   name="Phone",
-                   link="&#109;a&#105;lto&#58;agl&#105;&#37;63k&#64;a%67lic%6&#66;%&#50;E&#99;&#111;m",
-                   image="snIcons/PhoneLogo.png")
-        }}
-
-        <!-- PGP -->
-        {{include ("index_templates/contactButton.html",
-                   name="GPG Key",
-                   link="/#nowhereYet",
-                   image="snIcons/PGPKeyLogo.png")
-        }}
+        
+        <div style="clear:left; height: 20px">
+          
+        </div>
       </div>
     </div>
     {{include ("global_templates/footer.html")}}
